@@ -5,7 +5,7 @@ import logging
 def setup_logging():
     """Set up logging configuration."""
     if not os.path.exists('log'):
-        os.makedirs('log')
+        os.makedirs('log',exist_ok=True)
     logging.basicConfig(
         filename='log/agent.log',
         level=logging.DEBUG,
